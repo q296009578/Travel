@@ -3,7 +3,7 @@
         <div class="header-left"><div class="iconfont back-icon">&#xe624;</div></div>
         <div class="header-input"><span class="iconfont">&#xe632;</span></div>
         <div class="header-right">
-            城市
+            {{this.city}}
             <span class="iconfont arrow-icon">&#xe64a;</span>
         </div>
     </div>
@@ -11,7 +11,10 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  props: {
+    city: String
+  }
 }
 </script>
 
