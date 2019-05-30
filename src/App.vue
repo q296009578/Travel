@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <!-- 这个标签是占位符，表示显示当前路由地址显示的内容 -->
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
