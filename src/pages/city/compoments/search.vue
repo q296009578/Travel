@@ -65,7 +65,10 @@ export default {
     ...mapMutations(['changeCity'])
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.search)
+    this.scroll = new Bscroll(this.$refs.search, { mouseWheel: true, click: true, tap: true })
+  },
+  activated () {
+    this.keyword = ''
   }
 }
 </script>

@@ -54,7 +54,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new Bscrool(this.$refs.wrapper)
+    this.scroll = new Bscrool(this.$refs.wrapper, { mouseWheel: true, click: true, tap: true })
   },
   methods: {
     handleCityClick (city) {
