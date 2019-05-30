@@ -24,8 +24,14 @@ export default {
     }
   },
   methods: {
+    getScroll () {
+      return {
+        left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      }
+    },
     handleScroll () {
-      const top = document.documentElement.scrollTop
+      const top = this.getScroll().top
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
